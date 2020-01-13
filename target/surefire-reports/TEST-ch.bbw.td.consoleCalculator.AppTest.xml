@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ch.bbw.td.consoleCalculator.AppTest" time="0.025" tests="1" errors="0" skipped="0" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ch.bbw.td.consoleCalculator.AppTest" time="0.022" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -17,7 +17,8 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CH"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter17617790134816303901.jar /Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire 2020-01-13T12-57-54_564-jvmRun1 surefire7743254282732578641tmp surefire_04460248772098784877tmp"/>
+    <property name="sun.java.command" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter17148973249974235635.jar /Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire 2020-01-13T15-05-20_395-jvmRun1 surefire6697464597410710219tmp surefire_01452289171049298546tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/test-classes:/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/classes:/Users/tim/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/tim/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -33,8 +34,9 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter17617790134816303901.jar"/>
+    <property name="surefire.real.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter17148973249974235635.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="10.0.2+13"/>
     <property name="user.name" value="tim"/>
     <property name="path.separator" value=":"/>
@@ -58,10 +60,7 @@
     <property name="java.vm.version" value="10.0.2+13"/>
     <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
     <property name="java.class.version" value="54.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="test" classname="ch.bbw.td.consoleCalculator.AppTest" time="0.005">
-    <failure message="Not yet implemented" type="java.lang.AssertionError">java.lang.AssertionError: Not yet implemented
-	at ch.bbw.td.consoleCalculator.AppTest.test(AppTest.java:11)
-</failure>
-  </testcase>
+  <testcase name="test" classname="ch.bbw.td.consoleCalculator.AppTest" time="0.001"/>
 </testsuite>
