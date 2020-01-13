@@ -237,5 +237,14 @@ public class CalculatorTest {
 	}
 	
 	
+	
+	
+	
+	@Test
+	public void testDivisionPositivDurchPositivIsOk() {
+		assertTrue(testee.division(3, 2)== 1.5);
+	}
+	
+	
 
 }
