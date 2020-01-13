@@ -10,6 +10,8 @@ import ch.bbw.td.consolecalculator.Calculator;
 public class CalculatorTest {
 	Calculator testee;
 
+	
+	//Testerstellung für eine + Rechnung mit 2 positiven zahlen
 	@Test
 	public void testSummeZweiPositiveIsOk() {
 		testee = new Calculator();
