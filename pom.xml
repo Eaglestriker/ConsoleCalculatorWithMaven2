@@ -31,6 +31,7 @@
 	<build>
 		<plugins>
 			<plugin>
+			<!--Maven Plugin hinzugefügt am 13.1.2020-->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.2.0</version>
@@ -38,7 +39,7 @@
 					<archive>
 						<manifest>
 						<addClasspath>true</addClasspath>
-						<mainClass>ch.bbw.erga.consolecalculator.App</mainClass>
+						<mainClass>ch.bbw.td.consolecalculator.App</mainClass>
 						</manifest>
 					</archive>
 				</configuration>
