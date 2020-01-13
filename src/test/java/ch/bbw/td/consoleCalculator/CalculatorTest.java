@@ -107,6 +107,28 @@ public class CalculatorTest {
 		assertTrue(testee.summe(5, 0)== 5);
 	}
 	
+	@Test
+	public void testSummeMinValuePositiveIsOk() {
+		assertTrue(testee.summe(Integer.MIN_VALUE, 10) == -2147483638);
+	}
+	
+	@Test
+	public void testSummeMaxValuePositiveIsOk() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, 15) == -2147483634);
+	}
+	
+	@Test
+	public void testSummeMinValueNegativeIsOk() {
+		assertTrue(testee.summe(Integer.MIN_VALUE, -10) == 2147483638);
+	}
+	
+	@Test
+	public void testSummeMaxValueNegativeIsOk() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, -15) == 2147483632);
+	}
+	
+	
+	
 
 	
 	//Testerstellung für eine - Rechnung mit zwei positiven Zahlen
