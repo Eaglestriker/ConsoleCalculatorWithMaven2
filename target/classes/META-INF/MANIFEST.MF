@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Build-Jdk-Spec: 10
-Main-Class: ch.bbw.erga.consolecalculator.App
+Main-Class: ch.bbw.td.consolecalculator.App
 Created-By: Maven Integration for Eclipse
 
