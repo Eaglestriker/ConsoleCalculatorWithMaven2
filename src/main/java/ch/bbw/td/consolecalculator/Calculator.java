@@ -1,5 +1,11 @@
 package ch.bbw.td.consolecalculator;
 
+/**
+ * 
+ * @author Tim Dubath
+ * @version 10.01.2020
+ */
+
 public class Calculator {
 	
 	

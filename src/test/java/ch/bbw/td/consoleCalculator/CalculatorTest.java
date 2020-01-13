@@ -8,10 +8,18 @@ import org.junit.Test;
 
 import ch.bbw.td.consolecalculator.Calculator;
 
+/**
+ * 
+ * @author Tim Dubath
+ * @version 10.01.2020
+ */
+
 public class CalculatorTest {
 	Calculator testee;
 	
-
+	//Alle Tests wahren bereits von anfang an so geschrieben, 
+	//das Sie nur eine Funktion einer Klasse testen und nicht mehrere
+	
 	
 	@Before
 	public void setUp() {
