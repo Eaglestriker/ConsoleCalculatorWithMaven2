@@ -8,10 +8,18 @@ import org.junit.Test;
 
 import ch.bbw.td.consolecalculator.Calculator;
 
+/**
+ * 
+ * @author Tim Dubath
+ * @version 10.01.2020
+ */
+
 public class CalculatorTest {
 	Calculator testee;
 	
-
+	//Alle Tests wahren bereits von anfang an so geschrieben, 
+	//das Sie nur eine Funktion einer Klasse testen und nicht mehrere
+	
 	
 	@Before
 	public void setUp() {
@@ -98,6 +106,28 @@ public class CalculatorTest {
 	public void testSummePlus0IsOk() {
 		assertTrue(testee.summe(5, 0)== 5);
 	}
+	
+	@Test
+	public void testSummeMinValuePositiveIsOk() {
+		assertTrue(testee.summe(Integer.MIN_VALUE, 10) == -2147483638);
+	}
+	
+	@Test
+	public void testSummeMaxValuePositiveIsOk() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, 15) == -2147483634);
+	}
+	
+	@Test
+	public void testSummeMinValueNegativeIsOk() {
+		assertTrue(testee.summe(Integer.MIN_VALUE, -10) == 2147483638);
+	}
+	
+	@Test
+	public void testSummeMaxValueNegativeIsOk() {
+		assertTrue(testee.summe(Integer.MAX_VALUE, -15) == 2147483632);
+	}
+	
+	
 	
 
 	
