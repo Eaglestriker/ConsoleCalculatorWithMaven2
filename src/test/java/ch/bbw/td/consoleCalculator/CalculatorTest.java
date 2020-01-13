@@ -131,6 +131,9 @@ public class CalculatorTest {
 	
 
 	
+	
+	
+	
 	//Testerstellung für eine - Rechnung mit zwei positiven Zahlen
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
@@ -212,5 +215,27 @@ public class CalculatorTest {
 	public void testSubtractionPlus0IsOk() {
 		assertTrue(testee.subtraktion(5, 0)== 5);
 	}
+	
+	@Test
+	public void testSubtraktionMinValueNegativeIsOk() {
+		assertTrue(testee.subtraktion(Integer.MIN_VALUE, -10) == -2147483638);
+	}
+	
+	@Test
+	public void testSubtraktionMaxValuePositiveIsOk() {
+		assertTrue(testee.subtraktion(Integer.MAX_VALUE, 10) == 2147483637);
+	}
+	
+	@Test
+	public void testSubtraktionMinValuePositiveIsOk() {
+		assertTrue(testee.subtraktion(Integer.MIN_VALUE, 10) == 2147483638);
+	}
+	
+	@Test
+	public void testSubtraktionMaxValueNegativeIsOk() {
+		assertTrue(testee.subtraktion(Integer.MAX_VALUE, -10) == -2147483639);
+	}
+	
+	
 
 }
