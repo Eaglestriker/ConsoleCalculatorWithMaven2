@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CH"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter17591746393042684498.jar /Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire 2020-01-13T14-44-04_516-jvmRun1 surefire15221081812743214238tmp surefire_01554240684332390780tmp"/>
+    <property name="sun.java.command" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter8825795330336994881.jar /Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire 2020-01-13T14-53-29_149-jvmRun1 surefire8982996164618676674tmp surefire_07262973083379366656tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/test-classes:/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/classes:/Users/tim/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/tim/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter17591746393042684498.jar"/>
+    <property name="surefire.real.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter8825795330336994881.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="10.0.2+13"/>
