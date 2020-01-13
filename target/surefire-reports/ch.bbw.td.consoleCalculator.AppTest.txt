@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: ch.bbw.td.consoleCalculator.AppTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.025 s <<< FAILURE! - in ch.bbw.td.consoleCalculator.AppTest
+test(ch.bbw.td.consoleCalculator.AppTest)  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.AssertionError: Not yet implemented
+	at ch.bbw.td.consoleCalculator.AppTest.test(AppTest.java:11)
+
