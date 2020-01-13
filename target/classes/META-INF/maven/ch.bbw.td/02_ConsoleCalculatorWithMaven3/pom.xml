@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>ch.bbw.erga</groupId>
+	<groupId>ch.bbw.td</groupId>
 	<artifactId>02_ConsoleCalculatorWithMaven3</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
@@ -31,7 +31,6 @@
 	<build>
 		<plugins>
 			<plugin>
-			<!--Maven Plugin hinzugefügt am 13.1.2020-->
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.2.0</version>
@@ -60,7 +59,6 @@
 					<version>3.0.2</version>
 				</plugin>
 				<plugin>
-				<!--Compiling plugin hinzugefügt am 13.1.2020-->
 					<artifactId>maven-compiler-plugin</artifactId>
 					<version>3.8.0</version>
 				</plugin>
