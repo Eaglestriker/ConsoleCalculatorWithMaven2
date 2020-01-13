@@ -107,5 +107,80 @@ public class CalculatorTest {
 		
 		assertTrue(testee.subtraktion(25, 10) == 15);
 	}
+	
+	@Test
+	public void testSubtraction2negativIsOk() {
+		assertTrue(testee.subtraktion(-10, -10) == 0);
+	}
+	
+	@Test
+	public void testSubtraction1negativ1positivIsOk() {
+		assertTrue(testee.subtraktion(-10, 20)== -30);
+	}
+	
+	@Test
+	public void testSubtraction1positiv1negativIsOk() {
+		assertTrue(testee.subtraktion(20, -10)== 30);
+	}
+	
+	@Test
+	public void testSubtraction2mal0IsOk() {
+		assertTrue(testee.subtraktion(0, 0)== 0);
+	}
+	
+	@Test
+	public void testSubtraction2malMinus0IsOk() {
+		assertTrue(testee.subtraktion(-0, -0)== 0);
+	}
+	
+	@Test
+	public void testSubtraction1Plus01Minus0IsOk() {
+		assertTrue(testee.subtraktion(0, -0)== 0);
+	}
+	
+	@Test
+	public void testSubtraction1Minus01Plus0IsOk() {
+		assertTrue(testee.subtraktion(-0, 0)== 0);
+	}
+	
+	@Test
+	public void testSubtractionPlusMinus0IsOk() {
+		assertTrue(testee.subtraktion(5, -0)== 5);
+	}
+	
+	@Test
+	public void testSubtractionMinus0PlusIsOk() {
+		assertTrue(testee.subtraktion(-0, 5)== -5);
+	}
+	
+	@Test
+	public void testSubtractionMinus0MinusIsOk() {
+		assertTrue(testee.subtraktion(-0, -5)== 5);
+	}
+	
+	@Test
+	public void testSubtractionMinusMinus0IsOk() {
+		assertTrue(testee.subtraktion(-5, -0)== -5);
+	}
+	
+	@Test
+	public void testSubtractionMinusPlus0IsOk() {
+		assertTrue(testee.subtraktion(-5, 0)== -5);
+	}
+	
+	@Test
+	public void testSubtractionPlus0MinusIsOk() {
+		assertTrue(testee.subtraktion(0, -5)== 5);
+	}
+	
+	@Test
+	public void testSubtraction0PlusIsOk() {
+		assertTrue(testee.subtraktion(0, 5)== -5);
+	}
+	
+	@Test
+	public void testSubtractionPlus0IsOk() {
+		assertTrue(testee.subtraktion(5, 0)== 5);
+	}
 
 }
