@@ -4,6 +4,7 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import ch.bbw.td.consolecalculator.Calculator;
@@ -291,10 +292,38 @@ public class CalculatorTest {
 		}
 	}
 	
+	//Multiplikation Testfälle
+	//Die Methode multiplikation ist privat und kann somit nicht getestet werden.
+	@Ignore
+	@Test
+	public void testMultiplicationPositiveTimesPositiveIsOk() {
+		//assertTrue(testee.muliplikation(10,10)==100);
+	}
+	
+	//Quadrationen Testfälle
+	@Test
+	public void testQuadrierenPositveIsOk() {
+		assertTrue(testee.quadrieren(7)==49);
+	}
+	
+	@Test
+	public void testQuadrierenNegativeIsOk() {
+		assertTrue(testee.quadrieren(-5)== 25);
+	}
+	
+	@Test
+	public void testQuadrierenZeroIsOk() {
+		assertTrue(testee.quadrieren(0)== 0);
+	}
 	
 	
-	
-	
-	
+	//Wurzelberechnung Tests
+	//Methode kann nicht getestet werden, da sie in einem anderen Package liegt
+	//und somit keinen zugriff auf Tests in anderen Packages gewährt dies liegt an der Sichtbarkeit Protected.
+	@Ignore
+	@Test
+	public void testWurzelPositivIsOk() {
+		//assertTrue(testee.wurzelBerechnung(49)==7);
+	}
 
 }
