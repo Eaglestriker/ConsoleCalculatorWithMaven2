@@ -19,8 +19,8 @@ import ch.bbw.td.consolecalculator.Calculator;
 public class CalculatorTest {
 	Calculator testee;
 	
-	//Alle Tests wahren bereits von anfang an so geschrieben, 
-	//das Sie nur eine Funktion einer Klasse testen und nicht mehrere
+	//Alle Tests waren bereits von Anfang an so geschrieben, 
+	//dass Sie nur eine Funktion einer Klasse testen und nicht mehrere
 	
 	
 	@Before
@@ -29,7 +29,7 @@ public class CalculatorTest {
 	}
 	
 	//Tests für die Summe Methode
-	//Testerstellung für eine + Rechnung mit 2 positiven zahlen
+	//Testerstellung für eine + Rechnung mit 2 positiven Zahlen
 	@Test
 	public void testSummeZweiPositiveIsOk() {
 		assertTrue(testee.summe(10, 25) == 35);
@@ -291,7 +291,7 @@ public class CalculatorTest {
 	}
 	
 	
-	//Diese drei Tests failen aus unerklärlichen Gründen. Egal was ich expecte es failed. Benötige Hilfe von P. Rutschmann
+	//Diese drei Tests failen aus unerklärlichen Gründen. Egal was ich expecte sie failen. Benötige Hilfe von P. Rutschmann
 	
 	@Ignore
 	@Test(expected=ArithmeticException.class)
@@ -329,7 +329,7 @@ public class CalculatorTest {
 	
 	
 	//Multiplikation Testfälle
-	//Die Methode multiplikation ist privat und kann somit nicht getestet werden.
+	//Die Methode Multiplikation ist privat und kann somit nicht getestet werden.
 	@Ignore
 	@Test
 	public void testMultiplicationPositiveTimesPositiveIsOk() {
@@ -355,7 +355,7 @@ public class CalculatorTest {
 	
 	//Wurzelberechnung Tests
 	//Methode kann nicht getestet werden, da sie in einem anderen Package liegt
-	//und somit keinen zugriff auf Tests in anderen Packages gewährt dies liegt an der Sichtbarkeit Protected.
+	//und somit keinen Zugriff auf Tests in anderen Packages gewährt dies liegt an der Sichtbarkeit Protected.
 	@Ignore
 	@Test
 	public void testWurzelPositivIsOk() {
@@ -406,7 +406,4 @@ public class CalculatorTest {
 	public void testBinaryMinIntIsOk() {
 		assertEquals(testee.binary(Integer.MIN_VALUE),new String("10000000000000000000000000000000"));
 	}
-	
-	
-
 }
