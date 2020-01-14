@@ -26,6 +26,7 @@ public class CalculatorTest {
 		testee = new Calculator();
 	}
 	
+	//Tests für die Summe Methode
 	//Testerstellung für eine + Rechnung mit 2 positiven zahlen
 	@Test
 	public void testSummeZweiPositiveIsOk() {
@@ -127,13 +128,7 @@ public class CalculatorTest {
 		assertTrue(testee.summe(Integer.MAX_VALUE, -15) == 2147483632);
 	}
 	
-	
-	
-
-	
-	
-	
-	
+	//Test für die Subtraktion Methode
 	//Testerstellung für eine - Rechnung mit zwei positiven Zahlen
 	@Test
 	public void testSubtractionZweiPositiveIsOk() {
@@ -239,11 +234,66 @@ public class CalculatorTest {
 	
 	
 	
-	
+	//Division Tests
 	@Test
 	public void testDivisionPositivDurchPositivIsOk() {
 		assertTrue(testee.division(3, 2)== 1.5);
 	}
+	
+	@Test
+	public void testDivisionPositivDurchNegativIsOk() {
+		assertTrue(testee.division(5, -5)== -1);
+	}
+	
+	@Test
+	public void testDivisionNegativDurchPositivIsOk() {
+		assertTrue(testee.division(-5, 5)== -1);	
+	}
+	
+	@Test
+	public void testDivisionNegativDurchNegativIsOk() {
+		assertTrue(testee.division(-5, -5)== 1);
+	}
+	
+	@Test
+	public void testDivisionZeroDurchNegativIsOk() {
+		assertTrue(testee.division(0, -10)== 0);
+	}
+	
+	@Test
+	public void testDivisionZeroDurchPositivIsOk() {
+		assertTrue(testee.division(0, 30)== 0);
+	}
+	
+	@Test(expected=AssertionError.class)
+	public void testDivisionZeroDurchZeroIsOk() {
+		assertTrue(testee.division(0, 0)== 0);
+	}
+	
+	@Test(expected=ArithmeticException.class)
+	public void testDivisionPositivDurchZeroIsOk() {
+		testee.division(10, 0);
+	}
+	
+	@Test(expected=AssertionError.class)
+	public void testDivisionNegativDurchZeroIsOk() {
+		testee.division(-5, 0);
+	}
+	
+	
+	//unexpected Exception Test Aufgefangen mit einem Try Catch Block
+	@Test
+	public void testDivisionNegativDurchZeroexceptionIsOk() {
+		try {
+			assertTrue(testee.division(-5, 0)== 0);
+		}catch(AssertionError e) {
+			throw e;
+		}
+	}
+	
+	
+	
+	
 	
 	
 
