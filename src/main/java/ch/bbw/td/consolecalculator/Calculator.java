@@ -17,4 +17,9 @@ public class Calculator {
 		
 		return value1 - value2;
 	}
+	
+	public double division(double value1, double value2) {
+		return value1/value2;
+		
+	}
 }
