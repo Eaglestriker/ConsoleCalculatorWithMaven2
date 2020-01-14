@@ -22,4 +22,16 @@ public class Calculator {
 		return value1/value2;
 		
 	}
+	
+	private int muliplikation(int value1, int value2) {
+		return value1 * value2;
+	}
+
+	public int quadrieren(int value1) {
+		return value1 * value1;
+	}
+	
+	protected double wurzelBerechnung(int value) {
+		return Math.sqrt(value);
+	}
 }
