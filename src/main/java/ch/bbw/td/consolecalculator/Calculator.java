@@ -34,4 +34,12 @@ public class Calculator {
 	protected double wurzelBerechnung(int value) {
 		return Math.sqrt(value);
 	}
+	
+	public double zinseszins(double anfangskapital, double zinssatz, double jahre) {
+		double q = 1 + zinssatz/100;
+		double endkap = anfangskapital * Math.pow(q, jahre);
+		endkap = Math.rint(endkap*100);
+		endkap = endkap/100;
+		return endkap; 
+	}
 }

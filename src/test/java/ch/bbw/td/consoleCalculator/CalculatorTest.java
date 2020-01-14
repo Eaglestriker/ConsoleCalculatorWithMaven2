@@ -354,5 +354,30 @@ public class CalculatorTest {
 	public void testWurzelPositivIsOk() {
 		//assertTrue(testee.wurzelBerechnung(49)==7);
 	}
+	
+	//Zinseszins Test
+	@Test
+	public void testZinseszinsPositiveIsOk() {
+		double zins = testee.zinseszins(-100000, -1, 5);
+		System.out.println(zins);
+		assertTrue(testee.zinseszins(100000, 1, 5)== 105101.01);
+	}
+	
+	@Test
+	public void testZinseszinsZinsNegativIsOk() {
+		assertTrue(testee.zinseszins(100000, -1, 5)== 95099.0);
+	}
+	
+	@Test
+	public void testZinseszinsAnfangskapitalNegativIsOk() {
+		assertTrue(testee.zinseszins(-100000, 1, 5)== -105101.01);
+	}
+	
+	@Test
+	public void testZinseszinsAnfangskapitalNegativZinsenNegativIsOk() {
+		assertTrue(testee.zinseszins(-100000, 1, 5)== -95099.0);
+	}
+	
+	
 
 }
