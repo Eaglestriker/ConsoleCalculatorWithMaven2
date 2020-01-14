@@ -8,4 +8,7 @@ deploy:
   file: "/home/travis/.m2/repository/ch/bbw/td/02_ConsoleCalculatorWithMaven3/0.0.1-SNAPSHOT/02_ConsoleCalculatorWithMaven3-0.0.1-SNAPSHOT.jar"
   on:
     repo: Eaglestriker/ConsoleCalculatorWithMaven2
+	skip_cleanup:true
+	on:
+		tags: true
 
