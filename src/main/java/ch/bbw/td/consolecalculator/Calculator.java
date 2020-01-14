@@ -42,4 +42,9 @@ public class Calculator {
 		endkap = endkap/100;
 		return endkap; 
 	}
+	
+	public String binary(int number) {
+		String binary = Integer.toBinaryString(number);
+		return binary;
+	}
 }

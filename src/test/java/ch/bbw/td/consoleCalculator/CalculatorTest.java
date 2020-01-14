@@ -1,5 +1,6 @@
 package ch.bbw.td.consoleCalculator;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -382,6 +383,28 @@ public class CalculatorTest {
 	@Test
 	public void testZinseszinsAnfangskapitalNegativZinsenNegativIsOk() {
 		assertTrue(testee.zinseszins(-100000, -1, 5)== -95099.0);
+	}
+	
+	
+	//Binary Tests
+	@Test
+	public void testBinaryPositivIsOk() {
+		assertEquals(testee.binary(25),new String("11001"));
+	}
+	
+	@Test
+	public void testBinaryNegativIsOk() {
+		assertEquals(testee.binary(-25),new String("11111111111111111111111111100111"));
+	}
+	
+	@Test
+	public void testBinaryMaxIntIsOk() {
+		assertEquals(testee.binary(Integer.MAX_VALUE),new String("1111111111111111111111111111111"));
+	}
+	
+	@Test
+	public void testBinaryMinIntIsOk() {
+		assertEquals(testee.binary(Integer.MIN_VALUE),new String("10000000000000000000000000000000"));
 	}
 	
 	
