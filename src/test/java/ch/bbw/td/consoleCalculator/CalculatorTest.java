@@ -129,6 +129,16 @@ public class CalculatorTest {
 		assertTrue(testee.summe(Integer.MAX_VALUE, -15) == 2147483632);
 	}
 	
+	@Test
+	public void testSummeNegativePositivIsGreaterThenZero() {
+		assertTrue(testee.summe(-17, 30) > 0);
+	}
+	
+	@Test
+	public void testSummeNegativePositivIsLessThenZero() {
+		assertTrue(testee.summe(-37, 20) < 0);
+	}
+	
 	//Test für die Subtraktion Methode
 	//Testerstellung für eine - Rechnung mit zwei positiven Zahlen
 	@Test
@@ -232,8 +242,16 @@ public class CalculatorTest {
 		assertTrue(testee.subtraktion(Integer.MAX_VALUE, -10) == -2147483639);
 	}
 	
+	@Test
+	public void testSubtraktionPositivNegativGreaterThenZero() {
+		assertTrue(testee.subtraktion(49, -25) > 0);
+	}
 	
-	
+	@Test
+	public void testSubtraktion2PositivLessThenZero() {
+		assertTrue(testee.subtraktion(37, 38) < 0);
+	}
+
 	
 	//Division Tests
 	@Test
@@ -291,6 +309,17 @@ public class CalculatorTest {
 			throw e;
 		}
 	}
+	
+	@Test
+	public void testDivisionPositivNegativIsLessThenZero() {
+		assertTrue(testee.division(25, -40) < 0);
+	}
+	
+	@Test
+	public void testDivision2NegativGreaterThenZero() {
+		assertTrue(testee.division(-30, -15) > 0);
+	}
+	
 	
 	//Multiplikation Testfälle
 	//Die Methode multiplikation ist privat und kann somit nicht getestet werden.
