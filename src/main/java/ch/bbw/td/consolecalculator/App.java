@@ -2,6 +2,12 @@ package ch.bbw.td.consolecalculator;
 
 import java.util.Scanner;
 
+/**
+ * 
+ * @author Tim Dubath
+ * @version 10.01.2020
+ */
+
 public class App {
 	
 	public static void main(String[] args) {
