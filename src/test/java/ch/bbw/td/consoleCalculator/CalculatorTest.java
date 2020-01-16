@@ -408,7 +408,42 @@ public class CalculatorTest {
 	
 	//Zahlensysteme Tests
 	@Test
-	public void testZahlensystemeIntIsOk() {
+	public void testZahlensystemeIntPositivIsOk() {
 		assertEquals(testee.zahlensystemWandler(1, 10),new String("10"));
+	}
+	
+	@Test
+	public void testZahlensystemeIntnegativIsOk() {
+		assertEquals(testee.zahlensystemWandler(1, -10),new String("-10"));
+	}
+	
+	@Test
+	public void testZahlensystemeBinaerPositivIsOk() {
+		assertEquals(testee.zahlensystemWandler(2, 5),new String("101"));
+	}
+	
+	@Test
+	public void testZahlensystemeBinaerNegativIsOk() {
+		assertEquals(testee.zahlensystemWandler(2, -15),new String("11111111111111111111111111110001"));
+	}
+	
+	@Test
+	public void testZahlensystemeOktalPositivIsOk() {
+		assertEquals(testee.zahlensystemWandler(3, 36),new String("44"));
+	}
+	
+	@Test
+	public void testZahlensystemeOktalNegativIsOk() {
+		assertEquals(testee.zahlensystemWandler(3, -17),new String("37777777757"));
+	}
+	
+	@Test
+	public void testZahlensystemeHexPositivIsOk() {
+		assertEquals(testee.zahlensystemWandler(4, 30),new String("1e"));
+	}
+	
+	@Test
+	public void testZahlensystemeHexNegativIsOk() {
+		assertEquals(testee.zahlensystemWandler(4, -10),new String("fffffff6"));
 	}
 }
