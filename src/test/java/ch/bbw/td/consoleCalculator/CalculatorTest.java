@@ -404,4 +404,11 @@ public class CalculatorTest {
 	public void testBinaryMinIntIsOk() {
 		assertEquals(testee.binary(Integer.MIN_VALUE),new String("10000000000000000000000000000000"));
 	}
+	
+	
+	//Zahlensysteme Tests
+	@Test
+	public void testZahlensystemeIntIsOk() {
+		assertEquals(testee.zahlensystemWandler(1, 10),new String("10"));
+	}
 }
