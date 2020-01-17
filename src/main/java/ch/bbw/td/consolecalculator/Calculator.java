@@ -26,7 +26,7 @@ public class Calculator {
 		return value1 * value2;
 	}
 
-	public int quadrieren(int value1) {
+	int quadrieren(int value1) {
 		return value1 * value1;
 	}
 
