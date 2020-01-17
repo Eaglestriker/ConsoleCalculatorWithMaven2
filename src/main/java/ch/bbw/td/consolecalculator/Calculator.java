@@ -52,6 +52,7 @@ public class Calculator {
 	public ArrayList<String> zahlensystemWandler(int system, String eingabe) {
 		String ausgabe = "fehler";
 		ArrayList<String> ergebnisse = new ArrayList<String>();
+		
 		// von jedem Zahlensystem in jedes umrechnen können
 		// 1 = dezimal
 		// 2 = binär
