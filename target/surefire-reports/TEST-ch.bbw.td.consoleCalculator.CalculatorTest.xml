@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ch.bbw.td.consoleCalculator.CalculatorTest" time="0.02" tests="69" errors="0" skipped="3" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="ch.bbw.td.consoleCalculator.CalculatorTest" time="0.024" tests="86" errors="0" skipped="5" failures="0">
   <properties>
     <property name="gopherProxySet" value="false"/>
     <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
@@ -17,7 +17,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CH"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-10.0.2.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter7940037996939696647.jar /Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire 2020-01-16T09-14-59_364-jvmRun1 surefire10057388037292156163tmp surefire_0123622621998446421tmp"/>
+    <property name="sun.java.command" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter6846356834431561489.jar /Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire 2020-01-19T17-24-39_906-jvmRun1 surefire3280126737202015257tmp surefire_017266452644186257131tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/test-classes:/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/classes:/Users/tim/.m2/repository/junit/junit/4.11/junit-4.11.jar:/Users/tim/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
@@ -34,7 +34,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter7940037996939696647.jar"/>
+    <property name="surefire.real.class.path" value="/Users/tim/Schule/02_ConsoleCalculatorWithMaven3/target/surefire/surefirebooter6846356834431561489.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="10.0.2+13"/>
@@ -62,10 +62,14 @@
     <property name="java.class.version" value="54.0"/>
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase name="testDivisionNegativDurchZeroIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0.001"/>
+  <testcase name="testDivisionNegativDurchZeroIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testDivisionNegativDurchPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testDivisionPositivDurchZeroIsInfinity" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeMinValuePositiveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testQuadrierenNegativeIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testQuadrierenNegativeIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0">
+    <skipped/>
+  </testcase>
+  <testcase name="testZahlensystemeDecimalToHexPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraction1Plus01Minus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testDivisionNegativDurchNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeMinValueNegativeIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
@@ -74,15 +78,20 @@
   <testcase name="testZinseszinsPositiveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeMinusPlus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtractionPlusMinus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToHexMaxIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToHexNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToDecimalPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testZinseszinsAnfangskapitalNegativZinsenNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testZinseszinsZinsNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeZweiPositiveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraktionPositivNegativGreaterThenZero" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testQuadrierenZeroIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testSummePlus0MinusIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testDivisionNegativDurchZeroexceptionIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0">
+  <testcase name="testZahlensystemeDecimalToDecimalMinIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToDecimalNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testQuadrierenZeroIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0">
     <skipped/>
   </testcase>
+  <testcase name="testSummePlus0MinusIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testDivisionNegativDurchZeroexceptionIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeMaxValuePositiveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testDivisionZeroDurchZeroIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraction1positiv1negativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
@@ -92,6 +101,7 @@
   <testcase name="testSumme2negativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraction2negativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeMinus0PlusIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToOctalMinIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtractionMinus0MinusIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSumme2malMinus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testBinaryMinIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
@@ -99,32 +109,40 @@
   <testcase name="testDivisionPositivNegativIsLessThenZero" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testZinseszinsAnfangskapitalNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraction1Minus01Plus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToBinaerMinIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraction2mal0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testDivision2NegativGreaterThenZero" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testDivisionPositivDurchZeroIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0.001"/>
+  <testcase name="testDivisionPositivDurchZeroIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSumme1negativ1positivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeNegativePositivIsLessThenZero" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummePlusMinus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtractionMinusPlus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeMinusMinus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testDivisionPositivDurchPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0.001"/>
+  <testcase name="testDivisionPositivDurchPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummeNegativePositivIsGreaterThenZero" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSumme2mal0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToOctalPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraktionMinValuePositiveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToDecimalMaxIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtractionPlus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraktionMinValueNegativeIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraktion2PositivLessThenZero" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToHexMinIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtractionMinusMinus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testBinaryPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testDivisionPositivDurchNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testDivisionZeroDurchPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToOctalNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToBinaerPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSumme1positiv1negativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtractionPlus0MinusIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSummePlus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToOctalMaxIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0.001"/>
   <testcase name="testBinaryNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testDivisionZeroDurchNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSumme1Minus01Plus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testBinaryMaxIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0.001"/>
+  <testcase name="testBinaryMaxIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToBinaerNegativIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testWurzelPositivIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0">
     <skipped/>
   </testcase>
@@ -135,6 +153,9 @@
   <testcase name="testSubtraktionMaxValuePositiveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraction2malMinus0IsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
   <testcase name="testSubtraction0PlusIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
-  <testcase name="testQuadrierenPositveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testZahlensystemeDecimalToBinaerMaxIntIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
+  <testcase name="testQuadrierenPositveIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0">
+    <skipped/>
+  </testcase>
   <testcase name="testSubtraktionMaxValueNegativeIsOk" classname="ch.bbw.td.consoleCalculator.CalculatorTest" time="0"/>
 </testsuite>

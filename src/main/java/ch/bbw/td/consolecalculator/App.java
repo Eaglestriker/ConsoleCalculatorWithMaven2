@@ -1,5 +1,6 @@
 package ch.bbw.td.consolecalculator;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -12,6 +13,8 @@ public class App {
 	
 	public static void main(String[] args) {
 		Calculator calculator = new Calculator();
+		ArrayList<String> Ergebnisse = new ArrayList<String>();
+		String value = "a";
 		int valueA;
 		int valueB;
 		
@@ -30,7 +33,18 @@ public class App {
 		valueA = numberOne.nextInt();
 		valueB = numberTwo.nextInt();
 		
+		
+		
+		
 		System.out.println("Summe " + valueA + " + " + valueB + " = " + calculator.summe(valueA, valueB));
+		
+		Ergebnisse.addAll(calculator.zahlensystemWandler(4, value));
+		
+		for(int i = 0; i < Ergebnisse.size(); i++) {
+			System.out.println(Ergebnisse.get(i));
+		
+		}
+		
 	}
 
 }
