@@ -290,7 +290,6 @@ public class CalculatorTest {
 		assertTrue(testee.division(0, 0) == 0);
 	}
 
-
 	// Diese drei Tests failen aus unerklärlichen Gründen. Egal was ich expecte sie
 	// failen. Benötige Hilfe von P. Rutschmann
 
@@ -299,24 +298,20 @@ public class CalculatorTest {
 		assertTrue(testee.division(10, 0) == 0);
 	}
 
-	
 	@Test
 	public void testDivisionPositivDurchZeroIsInfinity() {
 		assertTrue(testee.division(10, 0) == Double.POSITIVE_INFINITY);
 	}
-
 
 	@Test(expected = AssertionError.class)
 	public void testDivisionNegativDurchZeroIsOk() {
 		assertTrue(testee.division(-5, 0) == 0);
 	}
 
-
 	@Test
 	public void testDivisionNegativDurchZeroexceptionIsOk() {
-			assertTrue(testee.division(-5, 0) == Double.NEGATIVE_INFINITY);
-		}
-
+		assertTrue(testee.division(-5, 0) == Double.NEGATIVE_INFINITY);
+	}
 
 	@Test
 	public void testDivisionPositivNegativIsLessThenZero() {
@@ -337,24 +332,26 @@ public class CalculatorTest {
 	}
 
 	// Quadrationen Testfälle
-	// Es kann nicht darauf zugegriffen werden da die Methode die Sichtbarkeit Package besitzt (Dies heist soviel wie das man nur im selben Package darauf zugreifen kann). 
-	//Aus diesem Grund  kann man die Methode auchnicht testen.
+	// Es kann nicht darauf zugegriffen werden da die Methode die Sichtbarkeit
+	// Package besitzt (Dies heist soviel wie das man nur im selben Package darauf
+	// zugreifen kann).
+	// Aus diesem Grund kann man die Methode auchnicht testen.
 	@Ignore
 	@Test
 	public void testQuadrierenPositveIsOk() {
-		//assertTrue(testee.quadrieren(7) == 49);
+		// assertTrue(testee.quadrieren(7) == 49);
 	}
 
 	@Ignore
 	@Test
 	public void testQuadrierenNegativeIsOk() {
-		//assertTrue(testee.quadrieren(-5) == 25);
+		// assertTrue(testee.quadrieren(-5) == 25);
 	}
 
 	@Ignore
 	@Test
 	public void testQuadrierenZeroIsOk() {
-		//assertTrue(testee.quadrieren(0) == 0);
+		// assertTrue(testee.quadrieren(0) == 0);
 
 	}
 
@@ -415,8 +412,8 @@ public class CalculatorTest {
 	// 2 = binär
 	// 3 = oktal
 	// 4 = hexadezimal
-	
-	//Binary to binary test
+
+	// Decimal to Decimal test
 	@Test
 	public void testZahlensystemeDecimalToDecimalPositivIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -424,7 +421,7 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(0);
 		assertEquals(ergebnis, new String("10"));
 	}
-	
+
 	@Test
 	public void testZahlensystemeDecimalToDecimalNegativIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -440,7 +437,7 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(0);
 		assertEquals(ergebnis, new String("2147483647"));
 	}
-	
+
 	@Test
 	public void testZahlensystemeDecimalToDecimalMinIntIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -448,8 +445,8 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(0);
 		assertEquals(ergebnis, new String("-2147483648"));
 	}
-	
-	//Decimal to binary tests
+
+	// Decimal to binary tests
 	@Test
 	public void testZahlensystemeDecimalToBinaerPositivIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -457,7 +454,7 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(1);
 		assertEquals(ergebnis, new String("1000"));
 	}
-	
+
 	@Test
 	public void testZahlensystemeDecimalToBinaerNegativIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -473,7 +470,7 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(1);
 		assertEquals(ergebnis, new String("1111111111111111111111111111111"));
 	}
-	
+
 	@Test
 	public void testZahlensystemeDecimalToBinaerMinIntIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -481,8 +478,8 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(1);
 		assertEquals(ergebnis, new String("10000000000000000000000000000000"));
 	}
-	
-	//Decimal to Octal test
+
+	// Decimal to Octal test
 	@Test
 	public void testZahlensystemeDecimalToOctalPositivIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -490,7 +487,7 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(2);
 		assertEquals(ergebnis, new String("115"));
 	}
-	
+
 	@Test
 	public void testZahlensystemeDecimalToOctalNegativIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -506,7 +503,7 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(2);
 		assertEquals(ergebnis, new String("17777777777"));
 	}
-	
+
 	@Test
 	public void testZahlensystemeDecimalToOctalMinIntIsOk() {
 		ArrayList<String> ergebnisse = new ArrayList<String>();
@@ -514,99 +511,271 @@ public class CalculatorTest {
 		String ergebnis = ergebnisse.get(2);
 		assertEquals(ergebnis, new String("20000000000"));
 	}
+
+	// Decimal to Hex test
+	@Test
+	public void testZahlensystemeDecimalToHexPositivIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(1, "150"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("96"));
+	}
+
+	@Test
+	public void testZahlensystemeDecimalToHexNegativIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(1, "-300"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("fffffed4"));
+	}
+
+	@Test
+	public void testZahlensystemeDecimalToHexMaxIntIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(1, "2147483647"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("7fffffff"));
+	}
+
+	@Test
+	public void testZahlensystemeDecimalToHexMinIntIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(1, "-2147483648"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("80000000"));
+	}
+
+	// binary to Decimal
+	@Test
+	public void testZahlensystemeBinaryToDecPositiveIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "101"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("5"));
+	}
+
+	@Test
+	public void testZahlensystemeBinaryToDecNegativeIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "-101"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("-5"));
+	}
+
+	@Test
+	public void testZahlensystemeBinaryToDecimalMaxIntIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "1111111111111111111111111111111"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("2147483647"));
+	}
+
+	@Test
+	public void testZahlensystemeBinaryToDecimalGrosserIntIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "1000000000000000000000000000000"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("1073741824"));
+	}
+
+	// Binary to binary
+	@Test
+	public void testZahlensystemeBinaryToBinaryPositiveIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "111"));
+		String ergebnis = ergebnisse.get(1);
+		assertEquals(ergebnis, new String("111"));
+	}
+
+	@Test
+	public void testZahelnsystemeBinaryToBinaryNegativeIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "-111"));
+		String ergebnis = ergebnisse.get(1);
+		assertEquals(ergebnis, new String("-111"));
+	}
+
+	// Binary to Octal
+	@Test
+	public void testZahlensystemeBinaryToOctalIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "1011"));
+		String ergebnis = ergebnisse.get(2);
+		assertEquals(ergebnis, new String("13"));
+	}
+
+	@Test
+	public void testZahlensystemeBinaryToOctalMaxIntIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "1111111111111111111111111111111"));
+		String ergebnis = ergebnisse.get(2);
+		assertEquals(ergebnis, new String("17777777777"));
+	}
+
+	@Test
+	public void testZahlensystemeBinaryToOctalMinIntIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "100000000000000000000000000000"));
+		String ergebnis = ergebnisse.get(2);
+		assertEquals(ergebnis, new String("4000000000"));
+	}
+
+	// Binary to Hexadecimal
+	@Test
+	public void testZahlensystemeBinaryToHexIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "1111"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("f"));
+	}
+
+	@Test
+	public void testZahlensystemeBinaryToHexMaxIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "1111111111111111111111111111111"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("7fffffff"));
+	}
+
+	@Test
+	public void testZahlensystemeBinaryToHexMinIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(2, "1"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("1"));
+	}
 	
-	//Decimal to Hex test
-		@Test
-		public void testZahlensystemeDecimalToHexPositivIsOk() {
-			ArrayList<String> ergebnisse = new ArrayList<String>();
-			ergebnisse.addAll(testee.zahlensystemWandler(1, "150"));
-			String ergebnis = ergebnisse.get(3);
-			assertEquals(ergebnis, new String("96"));
-		}
-		
-		@Test
-		public void testZahlensystemeDecimalToHexNegativIsOk() {
-			ArrayList<String> ergebnisse = new ArrayList<String>();
-			ergebnisse.addAll(testee.zahlensystemWandler(1, "-300"));
-			String ergebnis = ergebnisse.get(3);
-			assertEquals(ergebnis, new String("fffffed4"));
-		}
-
-		@Test
-		public void testZahlensystemeDecimalToHexMaxIntIsOk() {
-			ArrayList<String> ergebnisse = new ArrayList<String>();
-			ergebnisse.addAll(testee.zahlensystemWandler(1, "2147483647"));
-			String ergebnis = ergebnisse.get(3);
-			assertEquals(ergebnis, new String("7fffffff"));
-		}
-		
-		@Test
-		public void testZahlensystemeDecimalToHexMinIntIsOk() {
-			ArrayList<String> ergebnisse = new ArrayList<String>();
-			ergebnisse.addAll(testee.zahlensystemWandler(1, "-2147483648"));
-			String ergebnis = ergebnisse.get(3);
-			System.out.println(ergebnisse.get(3));
-			assertEquals(ergebnis, new String("80000000"));
-		}
-
-
-	/*@Test
-	public void testZahlensystemeBinaerPositivIsOk() {
-		assertEquals(testee.zahlensystemWandler(2, 5), new String("101"));
-	}
-
+	//Oktal to Decimal
 	@Test
-	public void testZahlensystemeBinaerNegativIsOk() {
-		assertEquals(testee.zahlensystemWandler(2, -15), new String("11111111111111111111111111110001"));
+	public void testZahlensystemeOctalToDecimalPositiveIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "77"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("63"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeBinaerMaxIntIsOk() {
-		assertEquals(testee.zahlensystemWandler(2, Integer.MAX_VALUE), new String("1111111111111111111111111111111"));
+	public void testZahlensystemeOctalToDecimalNegativeIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-77"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("-63"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeBinaerMinIntIsOk() {
-		assertEquals(testee.zahlensystemWandler(2, Integer.MIN_VALUE), new String("10000000000000000000000000000000"));
+	public void testZahlensystemeOctalToDecimalMaxIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "17777777777"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("2147483647"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeOktalPositivIsOk() {
-		assertEquals(testee.zahlensystemWandler(3, 36), new String("44"));
+	public void testZahlensystemeOctalToDecimalMinIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-17777777777"));
+		String ergebnis = ergebnisse.get(0);
+		assertEquals(ergebnis, new String("-2147483647"));
 	}
-
+	
+	//Oktal to binary
 	@Test
-	public void testZahlensystemeOktalNegativIsOk() {
-		assertEquals(testee.zahlensystemWandler(3, -17), new String("37777777757"));
+	public void testZahlensystemeOctalToBinaryPositiveIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "777"));
+		String ergebnis = ergebnisse.get(1);
+		assertEquals(ergebnis, new String("111111111"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeOktalMaxIntIsOk() {
-		assertEquals(testee.zahlensystemWandler(3, Integer.MAX_VALUE), new String("17777777777"));
+	public void testZahlensystemeOctalToBinaryNegativeIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-777"));
+		String ergebnis = ergebnisse.get(1);
+		assertEquals(ergebnis, new String("11111111111111111111111000000001"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeOktalMinIntIsOk() {
-		assertEquals(testee.zahlensystemWandler(3, Integer.MIN_VALUE), new String("20000000000"));
+	public void testZahlensystemeOctalToBinaryMaxIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "17777777777"));
+		String ergebnis = ergebnisse.get(1);
+		assertEquals(ergebnis, new String("1111111111111111111111111111111"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeHexPositivIsOk() {
-		assertEquals(testee.zahlensystemWandler(4, 30), new String("1e"));
+	public void testZahlensystemeOctalToBinaryMinIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-20000000000"));
+		String ergebnis = ergebnisse.get(1);
+		assertEquals(ergebnis, new String("10000000000000000000000000000000"));
 	}
-
+	
+	//Oktal to Oktal
 	@Test
-	public void testZahlensystemeHexNegativIsOk() {
-		assertEquals(testee.zahlensystemWandler(4, -10), new String("fffffff6"));
+	public void testZahlensystemeOctalToOctalPositiveIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "7777"));
+		String ergebnis = ergebnisse.get(2);
+		assertEquals(ergebnis, new String("7777"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeHexMaxIntIsOk() {
-		assertEquals(testee.zahlensystemWandler(4, Integer.MAX_VALUE), new String("7fffffff"));
+	public void testZahlensystemeOctalToOctalNegativeIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-7777"));
+		String ergebnis = ergebnisse.get(2);
+		assertEquals(ergebnis, new String("-7777"));
 	}
-
+	
 	@Test
-	public void testZahlensystemeHexMinIntIsOk() {
-		assertEquals(testee.zahlensystemWandler(4, Integer.MIN_VALUE), new String("80000000"));
-	}*/
+	public void testZahlensystemeOctalToOctalMaxIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "17777777777"));
+		String ergebnis = ergebnisse.get(2);
+		assertEquals(ergebnis, new String("17777777777"));
+	}
+	
+	@Test
+	public void testZahlensystemeOctalToOctalMinIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-17777777777"));
+		String ergebnis = ergebnisse.get(2);
+		assertEquals(ergebnis, new String("-17777777777"));
+	}
+	
+	//Oktal to Hex
+	@Test
+	public void testZahlensystemeOctalToHexPositiveIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "7777"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("fff"));
+	}
+	
+	@Test
+	public void testZahlensystemeOctalToHexNegativeIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-77777"));
+		String ergebnis = ergebnisse.get(3);
+		assertEquals(ergebnis, new String("ffff8001"));
+	}
+	
+	@Test
+	public void testZahlensystemeOctalToHexMaxIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "17777777777"));
+		String ergebnis = ergebnisse.get(3);
+		System.out.println(ergebnisse.get(3));
+		assertEquals(ergebnis, new String("7fffffff"));
+	}
+	
+	@Test
+	public void testZahlensystemeOctalToHexMinIsOk() {
+		ArrayList<String> ergebnisse = new ArrayList<String>();
+		ergebnisse.addAll(testee.zahlensystemWandler(3, "-17777777777"));
+		String ergebnis = ergebnisse.get(3);
+		System.out.println(ergebnisse.get(3));
+		assertEquals(ergebnis, new String("80000001"));
+	}
 }

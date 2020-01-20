@@ -49,7 +49,7 @@ public class Calculator {
 		return binary;
 	}
 
-	public ArrayList<String> zahlensystemWandler(int system, String eingabe) {
+	public ArrayList<String> zahlensystemWandler(int system, String eingabe){
 		String ausgabe = "fehler";
 		ArrayList<String> ergebnisse = new ArrayList<String>();
 		
@@ -68,6 +68,7 @@ public class Calculator {
 			break;
 
 		case 2:
+			
 			int number2 = Integer.parseInt(eingabe, 2);
 			ergebnisse.add(Integer.toString(number2));
 			ergebnisse.add(eingabe);
