@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: ch.bbw.td.consoleCalculator.CalculatorTest
 -------------------------------------------------------------------------------
-Tests run: 69, Failures: 0, Errors: 0, Skipped: 3, Time elapsed: 0.02 s - in ch.bbw.td.consoleCalculator.CalculatorTest
+Tests run: 86, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.024 s - in ch.bbw.td.consoleCalculator.CalculatorTest
